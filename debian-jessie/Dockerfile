@@ -23,7 +23,8 @@ RUN apt-get update && \
     pip3 install svgwrite
     apt-get --yes purge\ 
 	wget\
-	ca-certificates&& \
+	ca-certificates\
+	python3-pip&& \
     apt-get --yes clean && \
     apt-get --yes autoclean && \
     apt-get --yes autoremove && \
