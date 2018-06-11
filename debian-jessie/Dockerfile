@@ -9,7 +9,7 @@ RUN apt-get update && \
                           texlive-fonts-recommended\
 		          texlive-fonts-extra\
 			  cm-super\
-			  python3-svgwrite\
+			  python3-pip\
 			  librsvg2-bin\
                           make\
 			  wget\
@@ -20,6 +20,7 @@ RUN apt-get update && \
     wget "https://github.com/jgm/pandoc/releases/download/2.2.1/pandoc-2.2.1-1-amd64.deb" -O pandoc.deb && \
     dpkg -i pandoc.deb && \
     rm pandoc.deb && \
+    pip3 install svgwrite
     apt-get --yes purge\ 
 	wget\
 	ca-certificates&& \
