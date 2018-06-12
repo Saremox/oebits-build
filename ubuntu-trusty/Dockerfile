@@ -8,6 +8,7 @@ RUN apt-get update && \
                           texlive-latex-extra\
                           texlive-fonts-recommended\
 		          texlive-fonts-extra\
+			  libgmp10\
 			  cm-super\
 			  python3-pip\
 			  librsvg2-bin\
