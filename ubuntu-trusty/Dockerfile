@@ -10,6 +10,7 @@ RUN apt-get update && \
 		          texlive-fonts-extra\
 			  libgmp10\
 			  cm-super\
+			  python3\
 			  python3-pip\
 			  librsvg2-bin\
                           make\
