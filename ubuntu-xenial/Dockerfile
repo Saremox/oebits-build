@@ -37,6 +37,23 @@ RUN apt-get update && \
     rm -rf /usr/share/linda/* && \
     rm -rf /usr/share/lintian/* && \
     rm -rf /usr/share/man/*
+
+RUN echo "deb http://deb.debian.org/debian/ testing main contrib non-free" >> /etc/apt/sources.list.d/open-sans.list && \
+    apt-get update && \
+    apt-get --no-install-recommends --yes -t testing install\
+        fonts-open-sans && \
+    apt-get --yes clean && \
+    apt-get --yes autoclean && \
+    apt-get --yes autoremove && \
+    rm -rf /var/log/* && \
+    rm -rf /var/cache/* && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /usr/share/doc/* && \
+    rm -rf /usr/share/groff/* && \
+    rm -rf /usr/share/info/* && \
+    rm -rf /usr/share/linda/* && \
+    rm -rf /usr/share/lintian/* && \
+    rm -rf /usr/share/man/*
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 LABEL version="0.1"
