@@ -5,19 +5,19 @@ RUN apt-get update && \
 			  texlive-lang-german\
 			  texlive-latex-base\
 			  texlive-latex-recommended\
-                          texlive-latex-extra\
-                          texlive-fonts-recommended\
-		          texlive-fonts-extra\
+              texlive-latex-extra\
+              texlive-fonts-recommended\
+		      texlive-fonts-extra\
 			  cm-super\
 			  python3-svgwrite\
 			  librsvg2-bin\
-                          make\
+              make\
 			  wget\
-                          locales\
+              locales\
 			  ca-certificates && \
     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
     locale-gen en_US.UTF-8 && \
-    wget "https://github.com/jgm/pandoc/releases/download/2.2.1/pandoc-2.2.1-1-amd64.deb" -O pandoc.deb && \
+    wget "https://github.com/jgm/pandoc/releases/download/2.7.3/pandoc-2.7.3-1-amd64.deb" -O pandoc.deb && \
     dpkg -i pandoc.deb && \
     rm pandoc.deb && \
     apt-get --yes purge\ 
