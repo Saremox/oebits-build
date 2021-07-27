@@ -14,6 +14,7 @@ RUN apt-get update && \
               make\
 			  wget\
               locales\
+              inkscape\
 			  ca-certificates && \
     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
     locale-gen en_US.UTF-8 && \
